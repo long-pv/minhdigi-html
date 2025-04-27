@@ -8,6 +8,7 @@ const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const del = require("del");
 const browserSync = require("browser-sync").create();
+const path = require("path"); // Thêm path để xử lý unlink ảnh
 
 // Đường dẫn nguồn và đích
 const paths = {
@@ -47,7 +48,7 @@ function clean() {
 	return del(["dist"]);
 }
 
-// Xử lý HTML (chỉ include partials, không nén)
+// Xử lý HTML
 function html() {
 	return src(paths.html.src)
 		.pipe(fileInclude({ prefix: "@@", basepath: "@file" }))
@@ -55,12 +56,12 @@ function html() {
 		.pipe(browserSync.stream());
 }
 
-// Build SCSS -> CSS (main.css)
+// Xử lý CSS
 function styles() {
 	return src(paths.styles.src).pipe(sass().on("error", sass.logError)).pipe(cleanCSS()).pipe(rename("main.css")).pipe(dest(paths.styles.dest)).pipe(browserSync.stream());
 }
 
-// Build vendor.scss -> vendor.css
+// Xử lý vendor CSS
 function vendorStyles() {
 	return src(paths.vendorStyles.src)
 		.pipe(sass({ url: false }).on("error", sass.logError))
@@ -70,22 +71,29 @@ function vendorStyles() {
 		.pipe(browserSync.stream());
 }
 
-// Build main.js -> main.js (minify)
+// Xử lý JS
 function scripts() {
 	return src(paths.scripts.src).pipe(uglify()).pipe(rename("main.js")).pipe(dest(paths.scripts.dest)).pipe(browserSync.stream());
 }
 
-// Bundle vendor JS -> vendor.js
+// Bundle vendor JS
 function vendorScripts() {
 	return src(paths.vendorScripts.src).pipe(concat("vendor.js")).pipe(dest(paths.vendorScripts.dest));
 }
 
-// Tối ưu ảnh
+// Xử lý ảnh
 function images() {
 	return src(paths.images.src).pipe(imagemin()).pipe(dest(paths.images.dest)).pipe(browserSync.stream());
 }
 
-// Serve + Watch files
+// Xử lý xóa ảnh
+function removeDeletedImage(filePath) {
+	const filePathFromSrc = path.relative(path.resolve("src/images"), filePath);
+	const destFilePath = path.resolve(paths.images.dest, filePathFromSrc);
+	del(destFilePath);
+}
+
+// Serve + Watch
 function serve() {
 	browserSync.init({
 		server: { baseDir: "dist" },
@@ -98,10 +106,14 @@ function serve() {
 	watch(paths.styles.watch, styles);
 	watch(paths.vendorStyles.watch, vendorStyles);
 	watch(paths.scripts.watch, scripts);
-	watch(paths.images.watch, images);
+
+	const imageWatcher = watch(paths.images.watch);
+	imageWatcher.on("add", images);
+	imageWatcher.on("change", images);
+	imageWatcher.on("unlink", removeDeletedImage);
 }
 
-// Các tasks
+// Tasks
 exports.clean = clean;
 exports.build = series(clean, parallel(html, styles, vendorStyles, scripts, vendorScripts, images));
 exports.default = series(exports.build, serve);
