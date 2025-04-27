@@ -1,0 +1,28 @@
+// Primary theme colors
+$primary: #1a73e8;
+$secondary: #6c757d;
+$success: #28a745;
+$danger: #dc3545;
+$warning: #ffc107;
+$info: #17a2b8;
+$light: #f8f9fa;
+$dark: #343a40;
+
+// Container
+$container-max-widths: (
+    sm : 480px,
+    md : 700px,
+    lg : 1100px,
+    xl : 1200px,
+    xxl : 1200px
+);
+
+// Breakpoints
+$grid-breakpoints: (
+    xs : 0,
+    sm : 480px,
+    md : 768px,
+    lg : 1200px,
+    xl : 1300px,
+    xxl : 1600px
+);
