@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/vendor.css"> <!-- Thêm vendor.css -->
     <link rel="stylesheet" href="assets/css/style.css"> <!-- style.css -->
+    <link rel="stylesheet" href="assets/css/main.css"> <!-- main.css -->
 </head>
 
 <body>
@@ -15,9 +16,453 @@
     <!-- Include header -->
     @@include('partials/header.html')
 
-    <h1>
-        tôi là dev cỏ
-    </h1>
+    <!-- Banner Start -->
+    <section class="section__space">
+        <div class="banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2 class="banner__title">
+                            Mentor SEO Doanh Nghiệp - SEO MINH NGUYỄN
+                            Cố Vấn Chiến Lược & Đào Tạo Đội Ngũ In-house
+                            Bài bản – Thực chiến – Hiệu quả đo lường rõ ràng!
+                        </h2>
+                        <ul class="banner__list">
+                            <li class="list__item">
+                                🕒
+                                <img class="list__icon" src="" alt="">
+                                <span class="list__desc"> Đồng hành xây dựng chiến lược SEO vững chắc, đội ngũ nội bộ
+                                    chủ động và thoát khỏi phụ thuộc agency.</span>
+                            </li>
+                            <li class="list__item">
+                                👉
+                                <img class="list__icon" src="" alt="">
+                                <span class="list__desc"> [Đặt lịch tư vấn 1:1 với Mentor Seo Minh Nguyễn]</span>
+                            </li>
+                            <li class="list__item">
+                                🕒
+                                <img class="list__icon" src="" alt="">
+                                <span class="list__desc"> Đồng hành xây dựng chiến lược SEO vững chắc, đội ngũ nội bộ
+                                    chủ động và thoát khỏi phụ thuộc agency.</span>
+                            </li>
+                            <li class="list__item">
+                                🕒
+                                <img class="list__icon" src="" alt="">
+                                <span class="list__desc"> Đồng hành xây dựng chiến lược SEO vững chắc, đội ngũ nội bộ
+                                    chủ động và thoát khỏi phụ thuộc agency.</span>
+                            </li>
+                        </ul>
+                        <!-- Button -->
+                        <a href="#" class="banner__button banner__button--text"> Tìm hiểu ngay </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="banner__wrapper">
+                            <img class="banner__img" src="/assets/images/Banner Img.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner End -->
+
+    <!-- Contact Form Start -->
+    <section class="section__space">
+        <div class="container">
+            <div class="row contact_form__row">
+                <div class="col-lg-10">
+                    <div class="contact_form">
+                        <h2 class="contact_form__title">
+                            ĐỂ LẠI THÔNG TIN NHẬN TƯ VẤN
+                        </h2>
+                        <p class="contact_form__desc">
+                            Doanh nghiệp của bạn đang cần một giải pháp để xây dựng đội ngũ SEO hiệu quả. Hãy để lại
+                            thông tin để chúng tôi liên hệ tư vấn ngay hôm nay nhé
+                        </p>
+                        <form class="form_contact" action="#">
+                            <input type="text" class="form_contact__input" placeholder="Họ và tên">
+                            <input type="text" class="form_contact__input" placeholder="Số điện thoại">
+                            <input type="email" class="form_contact__input" placeholder="Email">
+                            <button type="submit" class="form_contact__button">NHẬN TƯ VẤN</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Form End -->
+
+    <!-- Learn Start -->
+    <section class="section__space">
+        <div class="learn">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="learn__title">
+                            <div class="title__content">
+                                <img src="path-to-your-icon.png" alt="Icon" class="title__icon" />
+                                <h2 class="title__text">Bạn sẽ học được gì?</h2>
+                            </div>
+                        </div>
+
+                        <p class="learn__desc">
+                            SEO MENTER (Đào tạo Seo Doanh Nghiệp) là giải pháp toàn diện cho công ty của bạn cần đào tạo
+                            nhân sự, leader marking muốn nắm bắt tổng quan về SEO. Từ đó giúp doanh nghiệp tạo được nền
+                            tảng vững chắc lâu dài cho chiến lược marketing của mình.
+                        </p>
+
+                        <div class="learn__list">
+                            <ul>
+                                <li><span>Đồng hành xây dựng chiến lược SEO vững chắc, đội ngũ nội bộ chủ động và thoát
+                                        khỏi
+                                        phụ thuộc agency.</span></li>
+                                <li><span>[Đặt lịch tư vấn 1:1 với Mentor Seo Minh Nguyễn]</span></li>
+                                <li><span>Đồng hành xây dựng chiến lược SEO vững chắc, đội ngũ nội bộ chủ động và thoát
+                                        khỏi
+                                        phụ thuộc agency.</span></li>
+                                <li><span>Đồng hành xây dựng chiến lược SEO vững chắc, đội ngũ nội bộ chủ động và thoát
+                                        khỏi
+                                        phụ thuộc agency.</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Button -->
+                        <a href="#" class="learn__button learn__button--text"> Tìm hiểu ngay </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="learn__wrapper">
+                            <img class="learn__img" src="/assets/images/Learn Img.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Learn End -->
+
+    <!-- Customer Start -->
+    <section class="section__space">
+        <div class="customer">
+            <div class="container">
+                <h2 class="customer__title">
+                    Đối Tượng Khóa Học Seo Menter Là Ai?
+                </h2>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="audience">
+                            <div class="audience__img">
+                                <img src="/assets/images/audien-img.png" alt="">
+                            </div>
+                            <div class="audience__position">
+                                CHỦ DOANH NGHIỆP
+                            </div>
+                            <div class="audience__list">
+                                <ul>
+                                    <li><span>Đồng hành xây dựng chiến lược SEO vững chắc, đội ngũ nội bộ chủ động và
+                                            thoát
+                                            khỏi
+                                            phụ thuộc agency.</span></li>
+                                    <li><span>[Đặt lịch tư vấn 1:1 với Mentor Seo Minh Nguyễn]</span></li>
+                                    <li><span>Đồng hành xây dựng chiến lược SEO vững chắc, đội ngũ nội bộ chủ động và
+                                            thoát
+                                            khỏi
+                                            phụ thuộc agency.</span></li>
+                                    <li><span>Đồng hành xây dựng chiến lược SEO vững chắc, đội ngũ nội bộ chủ động và
+                                            thoát
+                                            khỏi
+                                            phụ thuộc agency.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="audience">
+                            <div class="audience__img">
+                                <img src="/assets/images/audien-img.png" alt="">
+                            </div>
+                            <div class="audience__position">
+                                CHỦ DOANH NGHIỆP
+                            </div>
+                            <div class="audience__list">
+                                <ul>
+                                    <li><span>Đồng hành xây dựng chiến lược SEO vững chắc, đội ngũ nội bộ chủ động và
+                                            thoát
+                                            khỏi
+                                            phụ thuộc agency.</span></li>
+                                    <li><span>[Đặt lịch tư vấn 1:1 với Mentor Seo Minh Nguyễn]</span></li>
+                                    <li><span>Đồng hành xây dựng chiến lược SEO vững chắc, đội ngũ nội bộ chủ động và
+                                            thoát
+                                            khỏi
+                                            phụ thuộc agency.</span></li>
+                                    <li><span>Đồng hành xây dựng chiến lược SEO vững chắc, đội ngũ nội bộ chủ động và
+                                            thoát
+                                            khỏi
+                                            phụ thuộc agency.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="audience">
+                            <div class="audience__img">
+                                <img src="/assets/images/audien-img.png" alt="">
+                            </div>
+                            <div class="audience__position">
+                                CHỦ DOANH NGHIỆP
+                            </div>
+                            <div class="audience__list">
+                                <ul>
+                                    <li><span>Đồng hành xây dựng chiến lược SEO vững chắc, đội ngũ nội bộ chủ động và
+                                            thoát
+                                            khỏi
+                                            phụ thuộc agency.</span></li>
+                                    <li><span>[Đặt lịch tư vấn 1:1 với Mentor Seo Minh Nguyễn]</span></li>
+                                    <li><span>Đồng hành xây dựng chiến lược SEO vững chắc, đội ngũ nội bộ chủ động và
+                                            thoát
+                                            khỏi
+                                            phụ thuộc agency.</span></li>
+                                    <li><span>Đồng hành xây dựng chiến lược SEO vững chắc, đội ngũ nội bộ chủ động và
+                                            thoát
+                                            khỏi
+                                            phụ thuộc agency.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Customer End -->
+
+    <!-- Customer Start -->
+    <section class="section__space">
+        <div class="why_choose_us">
+            <div class="container">
+                <h2 class="why_choose_us__title">
+                    Đối Tượng Khóa Học Seo Menter Là Ai?
+                </h2>
+                <div class="why_choose_us__content">
+                    <div class="feature">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="feature__content">
+                                    <div class="feature__number">01</div>
+                                    <div class="feature__text">
+                                        <h3 class="feature__title">Giảng viên “thực chiến 200+ dự án”</h3>
+                                        <ul class="feature__list">
+                                            <li class="feature__item">Trực tiếp đào tạo bởi chuyên gia từng triển
+                                                khai thành công SEO cho hơn 200 doanh nghiệp lớn nhỏ.</li>
+                                            <li class="feature__item">Có kinh nghiệm thực chiến trong đa dạng ngành
+                                                nghề: TMĐT, giáo dục, y tế, B2B, dịch vụ.</li>
+                                            <li class="feature__item">Đưa ra ví dụ thực tế từ chính chiến dịch đã
+                                                làm, không dạy lý thuyết khô cứng.</li>
+                                            <li class="feature__item">Cập nhật liên tục các xu hướng và thuật toán
+                                                SEO mới nhất từ Google.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="feature__image">
+                                    <img src="/assets/images/img-1.png" alt="SEO Dashboard" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Customer End -->
+
+    <!-- Project Start -->
+    <section class="section__space">
+        <div class="container">
+            <div class="project">
+                <h2 class="project__heading">
+                    MỘT SỐ DỰ ÁN NỔI BẬT CỦA SEO MINH NGUYỄN
+                </h2>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="project__item">
+                            <a href="#" class="project__wrapper">
+                                <img src="/assets/images/project-1.png" alt="Báo chí và truyền thông"
+                                    class="project__image" />
+                            </a>
+                            <div class="project__content">
+                                <a href="#" class="project__title">
+                                    <i class="project__icon">🎓</i>
+                                    <h3 class="project__text">Báo chí & Truyền thông</h3>
+                                </a>
+                                <div class="project__stats row">
+                                    <div class="col-lg-6">
+                                        <div class="project__stat">
+                                            <div class="stat__info">
+                                                <span class="stat__value">147% </span>
+                                                <span class="stat__icon">▲</span>
+                                            </div>
+                                            <span class="stat__label">Vượt chỉ tiêu</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="project__stat">
+                                            <div class="stat__info">
+                                                <span class="stat__value">100% </span>
+                                                <span class="stat__icon">▲</span>
+                                            </div>
+                                            <span class="stat__label">SEO Tổng thể</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="project__item">
+                            <a href="#" class="project__wrapper">
+                                <img src="/assets/images/project-1.png" alt="Báo chí và truyền thông"
+                                    class="project__image" />
+                            </a>
+                            <div class="project__content">
+                                <a href="#" class="project__title">
+                                    <i class="project__icon">🎓</i>
+                                    <h3 class="project__text">Báo chí & Truyền thông</h3>
+                                </a>
+                                <div class="project__stats row">
+                                    <div class="col-lg-6">
+                                        <div class="project__stat">
+                                            <div class="stat__info">
+                                                <span class="stat__value">147% </span>
+                                                <span class="stat__icon">▲</span>
+                                            </div>
+                                            <span class="stat__label">Vượt chỉ tiêu</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="project__stat">
+                                            <div class="stat__info">
+                                                <span class="stat__value">100% </span>
+                                                <span class="stat__icon">▲</span>
+                                            </div>
+                                            <span class="stat__label">SEO Tổng thể</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="project__item">
+                            <a href="#" class="project__wrapper">
+                                <img src="/assets/images/project-1.png" alt="Báo chí và truyền thông"
+                                    class="project__image" />
+                            </a>
+                            <div class="project__content">
+                                <a href="#" class="project__title">
+                                    <i class="project__icon">🎓</i>
+                                    <h3 class="project__text">Báo chí & Truyền thông</h3>
+                                </a>
+                                <div class="project__stats row">
+                                    <div class="col-lg-6">
+                                        <div class="project__stat">
+                                            <div class="stat__info">
+                                                <span class="stat__value">147% </span>
+                                                <span class="stat__icon">▲</span>
+                                            </div>
+                                            <span class="stat__label">Vượt chỉ tiêu</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="project__stat">
+                                            <div class="stat__info">
+                                                <span class="stat__value">100% </span>
+                                                <span class="stat__icon">▲</span>
+                                            </div>
+                                            <span class="stat__label">SEO Tổng thể</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Project End -->
+
+    <!-- Reviews Start -->
+    <section class="section__space">
+        <div class="reviews">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="reviews__item">
+                            <div class="reviews__avatar">
+                                <div class="reviews__avatar--wrapper">
+                                    <img src="/assets/images/img-1.png" alt="Ảnh đại diện" class="reviews__image" />
+                                </div>
+                            </div>
+                            <h5 class="reviews__name">
+                                Anh Thái Thanh Phú – Trưởng phòng Tổ chức hành chính Cao đẳng Công nghiệp và Xây dựng
+                                (CIC)
+                            </h5>
+                            <div class="reviews__content">
+                                “Về quản trị công việc, tôi đánh giá là trường đã áp dụng FastWork một cách triệt để với
+                                những kết
+                                quả
+                                rất
+                                rõ ràng.
+                                FastWork mang lại kết quả giám sát chặt chẽ tình trạng thực hiện công việc của đội ngũ
+                                hơn
+                                100 thầy
+                                cô
+                                mà
+                                Zalo không thể làm được.”
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="reviews__item">
+                            <div class="reviews__avatar">
+                                <div class="reviews__avatar--wrapper">
+                                    <img src="/assets/images/img-1.png" alt="Ảnh đại diện" class="reviews__image" />
+                                </div>
+                            </div>
+                            <h5 class="reviews__name">
+                                Anh Thái Thanh Phú – Trưởng phòng Tổ chức hành chính Cao đẳng Công nghiệp và Xây dựng
+                                (CIC)
+                            </h5>
+                            <div class="reviews__content">
+                                “Về quản trị công việc, tôi đánh giá là trường đã áp dụng FastWork một cách triệt để với
+                                những kết
+                                quả
+                                rất
+                                rõ ràng.
+                                FastWork mang lại kết quả giám sát chặt chẽ tình trạng thực hiện công việc của đội ngũ
+                                hơn
+                                100 thầy
+                                cô
+                                mà
+                                Zalo không thể làm được.”
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Reviews End -->
+
+    <!--  -->
+
+    <!--  -->
+
+
+
+
+
 
     <!-- Include footer -->
     @@include('partials/footer.html')
